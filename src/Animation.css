@@ -1,0 +1,112 @@
+
+/* Animation For all types of Card cards */
+.card{
+    position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.4s, box-shadow 0.4s;
+      transform-origin: center bottom;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #3399ff, #f8f8f8);
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.4s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+    color:rgb(235, 16, 16);
+  }
+  
+  .card:hover::before {
+    opacity: 0.7;
+    transform: translateY(-100%);
+  } */
+
+
+  /* Animation For Documents Card on document in gallery */
+.Doc-card{
+    position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.4s, box-shadow 0.4s;
+      transform-origin: center bottom;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  
+  }
+  .Doc-card::before {
+    content: "";
+    position: absolute;
+    /* top: 100%; */
+    left: 0;
+    /* width: 100%;
+    height: 100%; */
+    background: linear-gradient(45deg, #3399ff, #f8f8f8);
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.4s;
+  }
+  
+  .Doc-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+    color:rgb(235, 16, 16);
+  }
+  
+  /* Animation for Animated button for Gallery on Navbar */
+  .gallery_btn{
+  
+    animation: rotate 5s linear infinite !important; 
+    color: rgb(106, 5, 5);
+    
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+/* Animation for Go Back Home button on Gallery pages */
+.Home-button {
+  z-index: 7;
+  color: #17dbf0;
+  border: 2px solid white;
+  outline: 2px dotted white;
+  top: 218px;
+  right: 0px; /* Set the initial right position */
+  font-size: 30px;
+  position: fixed;
+  cursor: pointer;
+  display: flex;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+  animation: moveRight 2s linear infinite alternate;
+}
+
+@keyframes moveRight {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 20px; /* Set the final right position */
+  }
+}
+
+
+
+
+
+
+
+
+  

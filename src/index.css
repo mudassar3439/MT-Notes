@@ -1,13 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./Media/bg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1; /* Place the background behind the content */
 }
+
+@media (max-width: 400px) {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./Media/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+/* Styles for large devices (768px width and above) */
+@media (min-width: 401px) {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./Media/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+/* ***************************************************************************************** */
+/* input field of Signin/ Signup and profile  */
+.input-field{
+  border-radius: 14px !important;
+  background-color: #dedefd !important;
+}
+
+
+/* Navbottom Box  */
+.box {
+  position: fixed;
+  width: 100% !important;
+  z-index: 7;
+  left: 0;
+  right:0;
+  bottom:-1px;
+  background-color: aliceblue;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+  color: orange;
+  
+}
+
+
+/* All navbar Border  */
+.nav-border{
+  border-top:5px solid white;
+  border-bottom:5px solid white;
+  background-color:#dedefd;
+}
+
+/* Navup Box  */
+.box-up {
+  position: fixed;
+  width: 100% !important;
+  z-index: 7;
+  left: 0;
+  top:-1px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  right:0;
+  background-color: aliceblue;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+  color: rgb(85, 56, 250);
+  
+}
+/* Name of user */
+.name{
+  font-family: 'Audiowide', sans-serif;
+  cursor: pointer;
+ 
+}
+
+/* Box for notes  */
+.sign-box-n{
+  border:2px solid white;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius:15px;
+ 
+}
+
+/* Box for Gallery  */
+.sign-box{
+  border:2px solid white;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius:20px;
+  height: 100% !important;
+}
+
+/* Back and save div in Notes */
+.back_save{
+  color: white;
+  width:100%;
+  font-size: 23px ;
+  
+}
+.back{
+  font-size:18px;
+}
+.save{
+  margin-top:-5px;
+  font-size:30px;
+}
+/* time and date div in notes */
+.time_date{
+  color: white;
+  width:100%;
+  font-size:12px ;
+  
+}
+
+/* input field of Notes  */
+.input-field-n{
+  background-color: transparent !important;
+  outline: none !important;
+  border: none !important;
+  font-weight: 500;
+  font-size: 25px; 
+  color: rgba(0, 0, 0, 0.606);
+  border-bottom:2px solid rgba(0, 0, 0, 0.152) !important;
+}
+.input-field-n::placeholder {
+  font-size: 25px; 
+  color: rgba(0, 0, 0, 0.404) !important;
+  font-weight: 500;
+}
+
+/* textarea field  */
+.textarea_field{
+  width: 100%;
+  background: transparent;
+  height: auto !important;
+  overflow: hidden;
+  font-size: large;
+  outline: none !important;
+  border: none !important;
+}
+/* For Custom Scrollbar for main Site pages  */
+.scrollable-container {
+  height: calc(110vh - 100px) !important; 
+  overflow-y: auto !important;
+  
+}
+/* .scrollable-Home {
+  height: calc(100vh - 100px) !important; 
+  overflow-y: auto !important;
+  
+} */
+
+
+/* Button of  Forms  */
+.submit-button{
+  border-radius: 15px !important;
+  height:40px;
+}
+
+
+
+/* Active Class of NaveLinks */
+.active{
+  color: blue !important;
+  font-size:20px !important;
+  margin: 0px;
+}
+
+
+  
+/* icon of Add box */
+.icon{
+  font-size:40px;
+}
+
+/* image of images page*/
+.card-img{
+  width:100% !important;
+  height: 220px !important;
+}
+/* image at detail page */
+.Detail-img{
+  width:100% !important;
+  height: 100% !important;
+ }
+/* video of Videos Page  */
+.card-video{
+  width:100% !important;
+  height: 200px !important;
+  
+}
+/* video icon on every video  */
+.video-Icon{
+  height: 60px;
+  width:60px;
+  color: #dedefd;
+  position: absolute !important;
+  left: 50% !important;
+  top: 42% !important;
+  /* z-index: 7; */
+  transform: translate(-50%, -50%) !important;
+}
+
+
+/* video at Details page  */
+.Detail-video{
+  width:100% !important;
+  height: 83vh !important;
+  /* margin-bottom: 10px; */
+}
+
+/* Audio of Audios Page */
+.Card-Audio{
+  width:100% !important;
+ 
+}
+/* offcanvas of Add files at navup page  */
+.offcanvas{
+  transform: translate(-50%, 1%) !important;
+  left: 50% !important;
+  bottom: 60px !important;
+  height: 100px !important;
+  scrollbar-width:0px;
+  max-width: 90% !important; 
+  width: auto !important; 
+  border:2px solid #dedefd !important;
+  border-radius: 10px !important;
+  color: white !important;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* offcanvas close button */
+.offcanvas-closebtn{
+  transform: translate(30%, -100%) !important;
+  left: 80% !important;
+  bottom: 100px !important;
+}
+
+/* loading spiner for adding media */
+.loading-spiner {
+  position: fixed !important;
+  left: 52% !important;
+  top: 40% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+
+
+/* Download Button on all details page  */
+.download:hover{
+  color:blue;
+  font-size:34px;
+}
+/* Delete Button on details page  */
+.delete:hover{
+  color:red;
+  font-size:34px;
+}
+
+/* * delete confirom box */
+.confirmation-box{
+  border:2px solid white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius:10px;
+}
+
+/* online/ ofline Alert  */
+.alert{
+  position: fixed;
+  top:280px;
+  height: 55px;
+  z-index: 7;
+  opacity: 10px;
+}
+/* online /ofline Alert Background  */
+.alert-Bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Register Button of Signup page  */
+.rigister-box{
+  width:50%;
+  border-bottom: 3px solid blue;
+  color: blue;
+  cursor: pointer;
+}
+
+/* Google Signin Box  */
+.google-box{
+  border:2px solid white;
+  border-radius:8px;
+  height:36px;
+  color:white;
+  background:orange;
+  cursor: pointer;
+}
+
+.google-box:hover{
+  color:black;
+  background-color:rgb(76, 58, 242);
+}
+/* Google Signin logo pic */
+.google-img{
+  width: 40px;
+  height: 29px;
+  margin-left: 7px;
+}
+
+/* hr Line  */
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: black;
+  margin: 0 0px;
+}
+/* text (or) in login page  */
+.text {
+  display: inline-block;
+  margin-top:0px;
+}
+
+/* Table of Account page  */
+.Table{
+  background-color: rgb(242 242 242);
+  width: 100%;
+  height:40px;
+  border-top:1px solid rgb(222 226 230);
+  border-bottom:1px solid rgb(222 226 230);
+  }
+  
+/* update bouuton of Account page  */
+.update_button{
+  width:80px !important;  
+}
+/* Text Aligen Right  */
+.text-right{
+  text-align: right !important;
+}
+
+/* Data Box of Developer Info  */
+.showdata{
+  position: fixed !important;
+  left: 50% !important;
+  top: 50% !important;
+  border: 4px solid white;
+  border-radius: 10px;
+  outline:2px solid #dedefd ;
+  background:#dedefd ;
+  z-index: 7;
+  transform: translate(-50%, -50%) !important;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Developer Info Close Button */
+.info-btn{
+  font-size: 15px !important;
+  color: white !important;
+
+}
+
+/* page Loader  */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+}
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-color: #ccc #0000;
+  animation: l16 1s infinite linear;
+}
+.loader::before,
+.loader::after {    
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+}
+.loader::before {
+  border-color: #f03355 #0000;
+  animation: inherit; 
+  animation-duration: .5s;
+  animation-direction: reverse;
+}
+.loader::after {
+  margin: 8px;
+}
+@keyframes l16 { 
+  100%{transform: rotate(1turn)}
+}
+
+
+
+/* Drag button on Home Page */
+.drag-button {
+  width: 40px !important;
+  height: 40px !important;
+  position: fixed;
+  left: 10px;
+  top: 200px;
+  z-index: 7;
+  color: #fff !important;
+  border: 2px solid white !important; 
+  border-radius: 50%;
+  outline: 2px dotted white; 
+  cursor: pointer;
+  display: flex;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease; 
+  
+}
+ /* Drag button on Home Page */
+.drag-button:hover {
+  width: 45px !important;
+  height: 45px !important;
+  background-color: #5229b9 !important; 
+  border:2px solid white  !important; 
+  outline:none; 
+}
+
+/* Logo pic on Signin/Signup page  */
+.Sign-logo{
+  width: 160;
+  height: 80px;
+}
+
+
+
